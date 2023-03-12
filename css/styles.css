@@ -1,0 +1,190 @@
+:root {
+  --text-dark: #9da4bd;
+  --text-light-1: #303030;
+  --text-light-2: #555555;
+  --title: #ffffff;
+  --btn-dark: #ffffff;
+  --btn-light: #303030;
+  --orange: #ff6c00;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: teal;
+}
+
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.btn-hover-dark {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--btn-dark);
+  width: 160px;
+  height: 40px;
+  border: 1px solid var(--orange);
+  border-radius: 25px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.btn-hover-light {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--btn-light);
+  width: 160px;
+  height: 40px;
+  border: 1px solid var(--orange);
+  border-radius: 25px;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.btn-hover-dark:hover,
+.btn-hover-dark:focus,
+.btn-hover-light:hover,
+.btn-hover-light:focus {
+  background-color: var(--orange);
+  color: var(--btn-dark);
+}
+
+.text-nav {
+  color: var(--title);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+}
+
+.text-nav:hover,
+.text-nav:focus {
+  color: var(--orange);
+}
+
+.title-main {
+  color: var(--title);
+  font-size: 72px;
+  line-height: 85px;
+  letter-spacing: 0.05em;
+}
+
+.name-section-dark {
+  color: rgba(157, 164, 189, 0.6);
+  font-size: 11px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.name-section-light {
+  color: var(--text-light-1);
+  font-size: 11px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.title-section-dark {
+  color: var(--title);
+  font-size: 42px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+}
+
+.title-section-light {
+  color: var(--text-light-1);
+  font-size: 42px;
+  line-height: 49px;
+  letter-spacing: 0.05em;
+}
+
+.text-section-dark {
+  color: var(--text-dark);
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+}
+
+.text-section-light {
+  color: var(--text-light-2);
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.02em;
+}
+
+.text-about-light {
+  color: var(--text-light-2);
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 0.02em;
+}
+
+.fig-old-trad {
+  color: var(--text-light-1);
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 57px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.text-old-trad {
+  color: var(--text-light-1);
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
+}
+
+.card-title {
+  color: var(--text-light-1);
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.card-text {
+  color: var(--orange);
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.title-footer {
+  color: var(--title);
+  font-size: 11px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.text-social {
+  color: var(--text-light-1);
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.2em;
+}
+
+.text-copyright {
+  color: var(--text-dark);
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.2em;
+}
