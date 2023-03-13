@@ -19,6 +19,8 @@ h2 {
 }
 
 button {
+  font-family: "Open Sans";
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -34,6 +36,22 @@ address {
   font-style: normal;
 }
 
+.header-link,
+.header-phone {
+  color: var(--title);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+}
+
+.header-link:hover,
+.header-link:focus,
+.header-phone:hover,
+.header-phone:focus {
+  color: var(--orange);
+}
+
 .btn-hover-dark {
   background-color: rgba(0, 0, 0, 0);
   color: var(--btn-dark);
@@ -42,7 +60,7 @@ address {
   border: 1px solid var(--orange);
   border-radius: 25px;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
@@ -55,7 +73,7 @@ address {
   border: 1px solid var(--orange);
   border-radius: 25px;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
@@ -68,71 +86,67 @@ address {
   color: var(--btn-dark);
 }
 
-.text-nav {
-  color: var(--title);
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.1em;
-}
-
-.text-nav:hover,
-.text-nav:focus {
-  color: var(--orange);
-}
-
 .title-main {
   color: var(--title);
+  font-weight: 700;
   font-size: 72px;
-  line-height: 85px;
+  line-height: 1.18;
   letter-spacing: 0.05em;
 }
 
 .name-section-dark {
   color: rgba(157, 164, 189, 0.6);
+  font-weight: 600;
   font-size: 11px;
-  line-height: 15px;
+  line-height: 1.36;
   text-transform: uppercase;
 }
 
 .name-section-light {
   color: var(--text-light-1);
+  font-weight: 600;
   font-size: 11px;
-  line-height: 15px;
+  line-height: 1.36;
   text-transform: uppercase;
 }
 
 .title-section-dark {
   color: var(--title);
+  font-weight: 700;
   font-size: 42px;
-  line-height: 49px;
+  line-height: 1.17;
   letter-spacing: 0.05em;
 }
 
 .title-section-light {
   color: var(--text-light-1);
+  font-weight: 700;
   font-size: 42px;
-  line-height: 49px;
+  line-height: 1.17;
   letter-spacing: 0.05em;
 }
 
 .text-section-dark {
   color: var(--text-dark);
+  font-weight: 400;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 1.67;
   letter-spacing: 0.02em;
 }
 
 .text-section-light {
   color: var(--text-light-2);
+  font-weight: 400;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 1.67;
   letter-spacing: 0.02em;
 }
 
 .text-about-light {
   color: var(--text-light-2);
+  font-weight: 400;
   font-size: 14px;
-  line-height: 26px;
+  line-height: 1.85;
   letter-spacing: 0.02em;
 }
 
@@ -140,51 +154,57 @@ address {
   color: var(--text-light-1);
   font-weight: 700;
   font-size: 42px;
-  line-height: 57px;
+  line-height: 1.36;
   text-align: center;
   letter-spacing: 0.05em;
 }
 
 .text-old-trad {
   color: var(--text-light-1);
+  font-weight: 600;
   font-size: 11px;
-  line-height: 15px;
+  line-height: 1.36;
   text-align: center;
 }
 
 .card-title {
   color: var(--text-light-1);
+  font-weight: 400;
   font-size: 18px;
-  line-height: 25px;
+  line-height: 1.39;
   text-align: center;
   letter-spacing: 0.02em;
 }
 
 .card-text {
   color: var(--orange);
+  font-weight: 400;
   font-size: 14px;
-  line-height: 19px;
+  line-height: 1.36;
   text-align: center;
   letter-spacing: 0.02em;
 }
 
 .title-footer {
   color: var(--title);
+  font-weight: 600;
   font-size: 11px;
-  line-height: 15px;
+  line-height: 1.36;
   text-transform: uppercase;
 }
 
 .text-social {
   color: var(--text-light-1);
+  font-weight: 600;
   font-size: 11px;
-  line-height: 15px;
+  line-height: 1.36;
   letter-spacing: 0.2em;
 }
 
 .text-copyright {
   color: var(--text-dark);
+  font-weight: 600;
   font-size: 11px;
-  line-height: 15px;
+  line-height: 1.36;
   letter-spacing: 0.2em;
 }
