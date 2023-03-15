@@ -1,27 +1,46 @@
 :root {
-  --text-dark: #9da4bd;
-  --text-light-1: #303030;
-  --text-light-2: #555555;
-  --title: #ffffff;
-  --btn-dark: #ffffff;
-  --btn-light: #303030;
-  --orange: #ff6c00;
+  --header-text: #ffffff;
+  --header-text-hover: #ff6c00;
+
+  --btn-bg: transparent;
+  --btn-text-light: #ffffff;
+  --btn-text-dark: #303030;
+  --btn-hover: #ff6c00;
+
+  --social-text: #303030;
+  --social-text-hover: #ff6c00;
+
+  --top-text-dark: rgba(157, 164, 189, 0.6);
+  --top-text-light: #303030;
+
+  --main-title-color: #ffffff;
+  --title-color-light: #303030;
+  --title-color-dark: #ffffff;
+
+  --bottom-text-dark: #9da4bd;
+  --bottom-text-light: #555555;
+
+  --about-text: #555555;
+
+  --benefits-text: #303030;
+
+  --barbers-text: #ff6c00;
+
+  --copyright-color: #9da4bd;
+
+  --contacts-color: #9da4bd;
+
+  --test: linear-gradient(to right, teal, tomato);
 }
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: teal;
+  background-image: var(--test);
 }
 
 h1,
 h2 {
   font-family: "Raleway", sans-serif;
-}
-
-button {
-  font-family: "Open Sans";
-  font-weight: 600;
-  cursor: pointer;
 }
 
 .list {
@@ -32,13 +51,48 @@ button {
   text-decoration: none;
 }
 
-address {
-  font-style: normal;
+.btn {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  background-color: var(--btn-bg);
+  width: 160px;
+  height: 40px;
+  border: 1px solid var(--btn-hover);
+  border-radius: 25px;
 }
+
+.top-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
+}
+
+.bottom-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+/** HEADER **/
 
 .header-link,
 .header-phone {
-  color: var(--title);
+  color: var(--header-text);
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -46,165 +100,297 @@ address {
 }
 
 .header-link:hover,
-.header-link:focus,
-.header-phone:hover,
-.header-phone:focus {
-  color: var(--orange);
+.header-link:focus {
+  color: var(--header-text-hover);
 }
 
-.btn-hover-dark {
-  background-color: rgba(0, 0, 0, 0);
-  color: var(--btn-dark);
-  width: 160px;
-  height: 40px;
-  border: 1px solid var(--orange);
-  border-radius: 25px;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+.header-btn {
+  color: var(--btn-text-light);
 }
 
-.btn-hover-light {
-  background-color: rgba(0, 0, 0, 0);
-  color: var(--btn-light);
-  width: 160px;
-  height: 40px;
-  border: 1px solid var(--orange);
-  border-radius: 25px;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+.header-btn:hover,
+.header-btn:focus {
+  background-color: var(--btn-hover);
+  color: var(--btn-text-light);
 }
 
-.btn-hover-dark:hover,
-.btn-hover-dark:focus,
-.btn-hover-light:hover,
-.btn-hover-light:focus {
-  background-color: var(--orange);
-  color: var(--btn-dark);
+/** HERO **/
+
+.hero {
+}
+.hero-list {
 }
 
-.title-main {
-  color: var(--title);
-  font-weight: 700;
+.hero-item {
+}
+
+.hero-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: var(--social-text);
+}
+
+.hero-link:hover,
+.hero-link:focus {
+  color: var(--social-text-hover);
+}
+
+.hero-top-text {
+  color: var(--top-text-dark);
+}
+
+.hero-title {
+  font-family: "Raleway", sans-serif;
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
+  color: var(--main-title-color);
 }
 
-.name-section-dark {
-  color: rgba(157, 164, 189, 0.6);
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  text-transform: uppercase;
+.hero-bottom-text {
+  color: var(--bottom-text-dark);
 }
 
-.name-section-light {
-  color: var(--text-light-1);
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  text-transform: uppercase;
+/** ABOUT **/
+
+.about {
+}
+.about-list {
 }
 
-.title-section-dark {
-  color: var(--title);
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
+.about-item {
 }
 
-.title-section-light {
-  color: var(--text-light-1);
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.17;
-  letter-spacing: 0.05em;
+.about-top-text {
+  color: var(--top-text-light);
 }
 
-.text-section-dark {
-  color: var(--text-dark);
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
+.about-title {
+  color: var(--title-color-light);
 }
 
-.text-section-light {
-  color: var(--text-light-2);
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
+.about-bottom-text {
+  color: var(--bottom-text-light);
 }
 
-.text-about-light {
-  color: var(--text-light-2);
-  font-weight: 400;
+.about-text {
   font-size: 14px;
   line-height: 1.85;
   letter-spacing: 0.02em;
+  color: var(--about-text);
 }
 
-.fig-old-trad {
-  color: var(--text-light-1);
+.about-btn {
+  color: var(--btn-text-dark);
+}
+
+.about-btn:hover,
+.about-btn:focus {
+  background-color: var(--btn-hover);
+  color: var(--btn-text-light);
+}
+
+/** PRICES **/
+
+.prices {
+}
+
+.prices-top-text {
+  color: var(--top-text-dark);
+}
+
+.prices-title {
+  color: var(--title-color-dark);
+}
+
+.prices-list {
+}
+
+.prices-item {
+}
+
+.prices-item-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: var(--bottom-text-dark);
+}
+
+.prices-btn {
+  color: var(--btn-text-light);
+}
+
+.prices-btn:hover,
+.prices-btn:focus {
+  background-color: var(--btn-hover);
+  color: var(--btn-text-light);
+}
+
+/** BENEFITS **/
+
+.benefits {
+}
+
+.benefits-list {
+}
+
+.benefits-item {
+}
+
+.count {
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.05em;
+  color: var(--benefits-text);
 }
 
-.text-old-trad {
-  color: var(--text-light-1);
+.benefits-item-text {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-align: center;
+  color: var(--benefits-text);
 }
 
-.card-title {
-  color: var(--text-light-1);
+.benefits-top-text {
+  color: var(--top-text-light);
+}
+
+.benefits-title {
+  color: var(--title-color-light);
+}
+
+.benefits-bottom-text {
+  color: var(--bottom-text-light);
+}
+
+/** BARBERS **/
+
+.barbers {
+}
+
+.barbers-top-text {
+  color: var(--top-text-light);
+}
+
+.barbers-title {
+  color: var(--title-color-light);
+}
+
+.barbers-list {
+}
+
+.barbers-item {
+}
+
+.barbers-subtitle {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.39;
   text-align: center;
   letter-spacing: 0.02em;
+
+  color: var(--title-color-light);
 }
 
-.card-text {
-  color: var(--orange);
-  font-weight: 400;
+.barbers-item-text {
   font-size: 14px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.02em;
+
+  color: var(--barbers-text);
 }
 
-.title-footer {
-  color: var(--title);
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  text-transform: uppercase;
+/** WORKS **/
+
+.works {
 }
 
-.text-social {
-  color: var(--text-light-1);
+.works-top-text {
+  color: var(--top-text-light);
+}
+
+.works-title {
+  color: var(--title-color-light);
+}
+
+.works-list {
+}
+
+.works-item {
+}
+
+/** CONTACTS **/
+
+.contacts {
+}
+
+.contacts-title {
+  color: var(--title-color-dark);
+}
+
+.contacts-address {
+  font-style: normal;
+}
+
+.contacts-list {
+}
+
+.contacts-item {
+}
+
+.contacts-link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  color: var(--contacts-color);
+}
+
+.contacts-subtitle {
+  color: var(--title-color-dark);
+}
+
+.contacts-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+
+  color: var(--contacts-color);
+}
+
+/** FOOTER **/
+
+.footer {
+}
+
+.footer-copyright {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
+
+  color: var(--copyright-color);
 }
 
-.text-copyright {
-  color: var(--text-dark);
+.footer-list {
+}
+
+.footer-link {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
+  color: var(--social-text);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--social-text-hover);
 }
