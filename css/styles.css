@@ -24,11 +24,15 @@
 
   --benefits-text: #303030;
 
+  --section-bg: #111319;
+
+  --barbers-bg: #f7f7f7;
   --barbers-text: #ff6c00;
 
-  --copyright-color: #9da4bd;
-
   --contacts-color: #9da4bd;
+
+  --footer-bg: #f7f7f7;
+  --copyright-color: #9da4bd;
 
   --test: linear-gradient(to right, teal, tomato);
 }
@@ -39,8 +43,35 @@ body {
 }
 
 h1,
-h2 {
-  font-family: "Raleway", sans-serif;
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+li {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 120px 0;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .list {
@@ -49,6 +80,11 @@ h2 {
 
 .link {
   text-decoration: none;
+}
+
+h1,
+h2 {
+  font-family: "Raleway", sans-serif;
 }
 
 .btn {
@@ -88,7 +124,34 @@ h2 {
   letter-spacing: 0.02em;
 }
 
-/** HEADER **/
+/** +++ HEADER ++++++++++++++++++++++++++++ **/
+
+.header {
+  padding-top: 32px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+  gap: 132px;
+
+  margin-right: 254px;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+  /* gap: 30px; */
+}
+
+.header-item:not(:last-child) {
+  margin-right: 30px;
+}
 
 .header-link,
 .header-phone {
@@ -106,6 +169,8 @@ h2 {
 
 .header-btn {
   color: var(--btn-text-light);
+
+  margin-left: 44px;
 }
 
 .header-btn:hover,
@@ -114,11 +179,18 @@ h2 {
   color: var(--btn-text-light);
 }
 
-/** HERO **/
+/** === HERO =================================== **/
 
 .hero {
+  background-color: rgba(157, 164, 189, 0.2);
 }
+
+.hero-container {
+  display: flex;
+}
+
 .hero-list {
+  width: 155px;
 }
 
 .hero-item {
@@ -137,6 +209,17 @@ h2 {
   color: var(--social-text-hover);
 }
 
+.hero-content {
+  padding-top: 184px;
+  padding-bottom: 208px;
+  padding-left: 80px;
+}
+
+.hero-title {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
 .hero-top-text {
   color: var(--top-text-dark);
 }
@@ -153,14 +236,26 @@ h2 {
   color: var(--bottom-text-dark);
 }
 
-/** ABOUT **/
+/** === ABOUT ==================================================== **/
 
 .about {
 }
+
+.about-container {
+  display: flex;
+  gap: 30px;
+}
+
 .about-list {
+  display: flex;
+  gap: 30px;
 }
 
 .about-item {
+}
+
+.about-content {
+  width: 470px;
 }
 
 .about-top-text {
@@ -169,6 +264,8 @@ h2 {
 
 .about-title {
   color: var(--title-color-light);
+
+  margin: 20px 0;
 }
 
 .about-bottom-text {
@@ -180,10 +277,14 @@ h2 {
   line-height: 1.85;
   letter-spacing: 0.02em;
   color: var(--about-text);
+
+  margin-top: 20px;
 }
 
 .about-btn {
   color: var(--btn-text-dark);
+
+  margin-top: 42px;
 }
 
 .about-btn:hover,
@@ -192,9 +293,10 @@ h2 {
   color: var(--btn-text-light);
 }
 
-/** PRICES **/
+/** === PRICES ================================================================ **/
 
 .prices {
+  background-color: var(--section-bg);
 }
 
 .prices-top-text {
@@ -203,12 +305,31 @@ h2 {
 
 .prices-title {
   color: var(--title-color-dark);
+
+  margin-top: 20px;
+  margin-bottom: 44px;
+}
+
+.prices-main-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
 }
 
 .prices-list {
+  width: 570px;
+
+  background-color: rgba(157, 164, 189, 0.2);
+  padding: 30px 20px;
 }
 
 .prices-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices-item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 .prices-item-text {
@@ -220,6 +341,9 @@ h2 {
 
 .prices-btn {
   color: var(--btn-text-light);
+
+  display: block;
+  margin: 44px auto 0;
 }
 
 .prices-btn:hover,
@@ -231,6 +355,11 @@ h2 {
 /** BENEFITS **/
 
 .benefits {
+}
+
+.benefits-container {
+  display: flex;
+  gap: 130px;
 }
 
 .benefits-list {
@@ -256,21 +385,28 @@ h2 {
   color: var(--benefits-text);
 }
 
+.benefits-content {
+  width: 500px;
+}
+
 .benefits-top-text {
   color: var(--top-text-light);
 }
 
 .benefits-title {
   color: var(--title-color-light);
+
+  margin: 20px 0;
 }
 
 .benefits-bottom-text {
   color: var(--bottom-text-light);
 }
 
-/** BARBERS **/
+/** === BARBERS ============================================== **/
 
 .barbers {
+  background-color: var(--barbers-bg);
 }
 
 .barbers-top-text {
@@ -279,12 +415,22 @@ h2 {
 
 .barbers-title {
   color: var(--title-color-light);
+
+  margin-top: 20px;
+  margin-bottom: 44px;
 }
 
 .barbers-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-left: -30px;
 }
 
 .barbers-item {
+  flex-basis: calc(100% / 3 - 30px);
+
+  margin-left: 30px;
 }
 
 .barbers-subtitle {
@@ -295,6 +441,9 @@ h2 {
   letter-spacing: 0.02em;
 
   color: var(--title-color-light);
+
+  margin-top: 30px;
+  margin-bottom: 8px;
 }
 
 .barbers-item-text {
@@ -320,22 +469,54 @@ h2 {
 }
 
 .works-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 44px;
+  margin-left: -30px;
 }
 
 .works-item {
+  flex-basis: calc(100% / 4 - 30px);
+
+  margin-left: 30px;
 }
 
-/** CONTACTS **/
+/** +++ INFO SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ **/
+
+.info {
+  background-color: var(--section-bg);
+}
+
+/** === INFO CONTAINER =========================================================== **/
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-title {
+  color: var(--title-color-dark);
+}
+
+/** === ONLINE-BOOKING  ============================================================================== **/
+
+.booking {
+  width: 815px;
+}
+
+/** === CONTACTS ============================================================ **/
 
 .contacts {
-}
+  width: 785px;
 
-.contacts-title {
-  color: var(--title-color-dark);
+  padding-left: 100px;
 }
 
 .contacts-address {
   font-style: normal;
+
+  margin-top: 40px;
+  margin-bottom: 70px;
 }
 
 .contacts-list {
@@ -363,11 +544,22 @@ h2 {
   letter-spacing: 0.02em;
 
   color: var(--contacts-color);
+
+  margin-top: 20px;
 }
 
 /** FOOTER **/
 
 .footer {
+  background-color: var(--footer-bg);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 56px 0;
 }
 
 .footer-copyright {
@@ -380,6 +572,10 @@ h2 {
 }
 
 .footer-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }
 
 .footer-link {
