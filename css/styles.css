@@ -13,6 +13,9 @@
   --top-text-dark: rgba(157, 164, 189, 0.6);
   --top-text-light: #303030;
 
+  --before-color-light: rgba(157, 164, 189, 0.6);
+  --before-color-dark: #303030;
+
   --main-title-color: #ffffff;
   --title-color-light: #303030;
   --title-color-dark: #ffffff;
@@ -28,18 +31,19 @@
 
   --barbers-bg: #f7f7f7;
   --barbers-text: #ff6c00;
+  --barbers-icon: #ffffff;
 
   --contacts-color: #9da4bd;
 
   --footer-bg: #f7f7f7;
   --copyright-color: #9da4bd;
 
-  --test: linear-gradient(to right, teal, tomato);
+  /* --test: linear-gradient(to right, teal, tomato); */
 }
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-image: var(--test);
+  /* background-image: var(--test); */
 }
 
 h1,
@@ -62,6 +66,20 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .section {
@@ -105,10 +123,21 @@ h2 {
 }
 
 .top-text {
+  display: flex;
+  align-items: center;
+
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
+}
+
+.top-text::before {
+  /* display: inline-block; */
+  content: "";
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
 }
 
 .title {
@@ -127,7 +156,11 @@ h2 {
 /** +++ HEADER ++++++++++++++++++++++++++++ **/
 
 .header {
+  position: absolute;
+  width: 100%;
+  z-index: 100;
   padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-container {
@@ -181,16 +214,32 @@ h2 {
 
 /** === HERO =================================== **/
 
-.hero {
-  background-color: rgba(157, 164, 189, 0.2);
-}
-
 .hero-container {
   display: flex;
 }
 
+.hero-soc-link {
+  /* display: flex;
+  justify-content: flex-start; */
+  width: 100px;
+}
+
 .hero-list {
-  width: 155px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  /* transform: rotate(-90deg); */
+}
+
+.hero-list::before {
+  /* display: inline-block; */
+  content: "";
+  width: 60px;
+  height: 1px;
+
+  background: var(--before-color-dark);
 }
 
 .hero-item {
@@ -210,9 +259,15 @@ h2 {
 }
 
 .hero-content {
-  padding-top: 184px;
+  padding-top: 272px;
   padding-bottom: 208px;
-  padding-left: 80px;
+  padding-left: 100px;
+  flex-grow: 1;
+
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+    url("../images/hero-img-1.jpg");
+  background-position: center center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -224,6 +279,10 @@ h2 {
   color: var(--top-text-dark);
 }
 
+.hero-top-text::before {
+  background-color: var(--before-color-light);
+}
+
 .hero-title {
   font-family: "Raleway", sans-serif;
   font-size: 72px;
@@ -233,6 +292,7 @@ h2 {
 }
 
 .hero-bottom-text {
+  max-width: 360px;
   color: var(--bottom-text-dark);
 }
 
@@ -255,11 +315,15 @@ h2 {
 }
 
 .about-content {
-  width: 470px;
+  max-width: 470px;
 }
 
 .about-top-text {
   color: var(--top-text-light);
+}
+
+.about-top-text::before {
+  background-color: var(--before-color-dark);
 }
 
 .about-title {
@@ -303,6 +367,10 @@ h2 {
   color: var(--top-text-dark);
 }
 
+.prices-top-text::before {
+  background-color: var(--before-color-light);
+}
+
 .prices-title {
   color: var(--title-color-dark);
 
@@ -312,12 +380,12 @@ h2 {
 
 .prices-main-list {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 30px;
 }
 
 .prices-list {
-  width: 570px;
+  width: calc((100% - 30px) / 2);
 
   background-color: rgba(157, 164, 189, 0.2);
   padding: 30px 20px;
@@ -333,11 +401,20 @@ h2 {
 }
 
 .prices-item-text {
+  /* display: flex;
+  align-items: center; */
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: var(--bottom-text-dark);
 }
+
+/* .prices-item-text::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+} */
 
 .prices-btn {
   color: var(--btn-text-light);
@@ -352,7 +429,7 @@ h2 {
   color: var(--btn-text-light);
 }
 
-/** BENEFITS **/
+/** === BENEFITS ============================================================ **/
 
 .benefits {
 }
@@ -393,6 +470,10 @@ h2 {
   color: var(--top-text-light);
 }
 
+.benefits-top-text::before {
+  background-color: var(--before-color-dark);
+}
+
 .benefits-title {
   color: var(--title-color-light);
 
@@ -411,6 +492,10 @@ h2 {
 
 .barbers-top-text {
   color: var(--top-text-light);
+}
+
+.barbers-top-text::before {
+  background-color: var(--before-color-dark);
 }
 
 .barbers-title {
@@ -455,13 +540,49 @@ h2 {
   color: var(--barbers-text);
 }
 
-/** WORKS **/
+.barbers-content-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  margin-top: 30px;
+}
+
+.barbers-content-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  background-color: var(--barbers-icon);
+  border-radius: 50%;
+  color: var(--social-text);
+}
+
+.barbers-content-link:hover,
+.barbers-content-link:focus {
+  color: var(--social-text-hover);
+}
+
+.barbers-content-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/** === WORKS ================================================================== **/
 
 .works {
 }
 
 .works-top-text {
   color: var(--top-text-light);
+}
+
+.works-top-text::before {
+  background-color: var(--before-color-dark);
 }
 
 .works-title {
@@ -473,6 +594,7 @@ h2 {
   flex-wrap: wrap;
   margin-top: 44px;
   margin-left: -30px;
+  row-gap: 30px;
 }
 
 .works-item {
@@ -523,6 +645,19 @@ h2 {
 }
 
 .contacts-item {
+  display: flex;
+  gap: 16px;
+}
+
+.contacts-item:not(:first-child) {
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contacts-icon {
+  width: 24px;
+  height: 24px;
+  /* fill: var(--contacts-color); */
 }
 
 .contacts-link {
@@ -535,7 +670,17 @@ h2 {
 }
 
 .contacts-subtitle {
+  gap: 20px;
   color: var(--title-color-dark);
+}
+
+.contacts-subtitle::before {
+  /* display: inline-block; */
+  content: "";
+  width: 60px;
+  height: 1px;
+
+  background: var(--before-color-light);
 }
 
 .contacts-text {
@@ -548,7 +693,7 @@ h2 {
   margin-top: 20px;
 }
 
-/** FOOTER **/
+/** === FOOTER ================================================== **/
 
 .footer {
   background-color: var(--footer-bg);
@@ -576,6 +721,15 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 40px;
+}
+
+.footer-list::before {
+  /* display: inline-block; */
+  content: "";
+  width: 60px;
+  height: 1px;
+
+  background: var(--before-color-dark);
 }
 
 .footer-link {
