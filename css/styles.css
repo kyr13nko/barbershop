@@ -26,6 +26,7 @@
   --about-text: #555555;
 
   --benefits-text: #303030;
+  --benefits-items: #f7f7f7;
 
   --section-bg: #111319;
 
@@ -34,6 +35,7 @@
   --barbers-icon: #ffffff;
 
   --contacts-color: #9da4bd;
+  --contacts-bg: #191c26;
 
   --footer-bg: #f7f7f7;
   --copyright-color: #9da4bd;
@@ -219,18 +221,10 @@ h2 {
 }
 
 .hero-soc-link {
-  /* display: flex;
-  justify-content: flex-start; */
   width: 100px;
 }
 
 .hero-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-
-  /* transform: rotate(-90deg); */
 }
 
 .hero-list::before {
@@ -360,7 +354,16 @@ h2 {
 /** === PRICES ================================================================ **/
 
 .prices {
+  width: 1600px;
+
   background-color: var(--section-bg);
+
+  background-image: url(../images/prices-img.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  margin: 0 auto;
 }
 
 .prices-top-text {
@@ -382,6 +385,14 @@ h2 {
   display: flex;
   /* justify-content: space-between; */
   gap: 30px;
+}
+
+.prices-list-left {
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.prices-list-right {
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .prices-list {
@@ -443,6 +454,12 @@ h2 {
 }
 
 .benefits-item {
+  width: 170px;
+  height: 133px;
+
+  background-color: var(--benefits-items);
+
+  padding: 24px 20px;
 }
 
 .count {
@@ -606,14 +623,21 @@ h2 {
 /** +++ INFO SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ **/
 
 .info {
+  width: 1600px;
   background-color: var(--section-bg);
+
+  margin: 0 auto;
 }
 
 /** === INFO CONTAINER =========================================================== **/
 
+.info {
+  background-color: var(--contacts-bg);
+}
+
 .info-container {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
 }
 
 .info-title {
@@ -623,13 +647,40 @@ h2 {
 /** === ONLINE-BOOKING  ============================================================================== **/
 
 .booking {
-  width: 815px;
+  /* max-width: 815px; */
+}
+
+/** === INFO CONTAINER =========================================================== **/
+
+.info {
+  width: 1600px;
+  background-color: var(--contacts-bg);
+
+  background-image: url(../images/contacts-img.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+
+  margin: 0 auto;
+}
+
+.info-container {
+  display: flex;
+}
+
+.info-title {
+  color: var(--title-color-dark);
+}
+
+/** === ONLINE-BOOKING  ============================================================================== **/
+
+.booking {
+  width: 600px;
 }
 
 /** === CONTACTS ============================================================ **/
 
 .contacts {
-  width: 785px;
+  width: 570px;
 
   padding-left: 100px;
 }
