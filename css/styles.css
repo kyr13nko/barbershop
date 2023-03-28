@@ -1,3 +1,5 @@
+/* #region ROOT ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 :root {
   --header-text: #ffffff;
   --header-text-hover: #ff6c00;
@@ -43,6 +45,10 @@
   /* --test: linear-gradient(to right, teal, tomato); */
 }
 
+/* #endregion ROOT ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* #region STYLES-NONE ++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 body {
   font-family: "Open Sans", sans-serif;
   /* background-image: var(--test); */
@@ -84,6 +90,18 @@ img {
   overflow: hidden;
 }
 
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/* #endregion STYLES-NONE ++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* #region STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 .section {
   padding: 120px 0;
 }
@@ -92,14 +110,6 @@ img {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-}
-
-.list {
-  list-style: none;
-}
-
-.link {
-  text-decoration: none;
 }
 
 h1,
@@ -155,7 +165,9 @@ h2 {
   letter-spacing: 0.02em;
 }
 
-/** +++ HEADER ++++++++++++++++++++++++++++ **/
+/* #endregion STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* #region HEADER ++++++++++++++++++++++++++++++++++++++ **/
 
 .header {
   position: absolute;
@@ -214,7 +226,9 @@ h2 {
   color: var(--btn-text-light);
 }
 
-/** === HERO =================================== **/
+/* #endregion HEADER +++++++++++++++++++++++++++++++++ **/
+
+/* #region HERO ======================================= */
 
 .hero-container {
   display: flex;
@@ -258,7 +272,10 @@ h2 {
   padding-left: 100px;
   flex-grow: 1;
 
-  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.2),
+      rgba(25, 28, 38, 0.2)
+    ),
     url("../images/hero-img-1.jpg");
   background-position: center center;
   background-size: cover;
@@ -290,7 +307,9 @@ h2 {
   color: var(--bottom-text-dark);
 }
 
-/** === ABOUT ==================================================== **/
+/* #endregion HERO =================================== **/
+
+/* #region ABOUT ====================================== */
 
 .about {
 }
@@ -350,8 +369,9 @@ h2 {
   background-color: var(--btn-hover);
   color: var(--btn-text-light);
 }
+/* #endregion ABOUT =================================== */
 
-/** === PRICES ================================================================ **/
+/* #region PRICES ===================================== */
 
 .prices {
   width: 1600px;
@@ -388,15 +408,23 @@ h2 {
 }
 
 .prices-list-left {
-  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
+  );
 }
 
 .prices-list-right {
-  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  background-image: linear-gradient(
+    180deg,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
 }
 
 .prices-list {
-  width: calc((100% - 30px) / 2);
+  width: calc((100% - 30px) / 3);
 
   background-color: rgba(157, 164, 189, 0.2);
   padding: 30px 20px;
@@ -440,7 +468,9 @@ h2 {
   color: var(--btn-text-light);
 }
 
-/** === BENEFITS ============================================================ **/
+/* #endregion PRICES ================================== */
+
+/* #region BENEFITS =================================== */
 
 .benefits {
 }
@@ -501,7 +531,9 @@ h2 {
   color: var(--bottom-text-light);
 }
 
-/** === BARBERS ============================================== **/
+/* #endregion BENEFITS ================================ */
+
+/* #region BARBERS ==================================== */
 
 .barbers {
   background-color: var(--barbers-bg);
@@ -589,7 +621,9 @@ h2 {
   fill: currentColor;
 }
 
-/** === WORKS ================================================================== **/
+/* #endregion BARBERS ================================= */
+
+/* #region WORKS ======================================= */
 
 .works {
 }
@@ -620,41 +654,13 @@ h2 {
   margin-left: 30px;
 }
 
-/** +++ INFO SECTION ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ **/
+/* #endregion WORKS ==================================== */
+
+/* #region INFO CONTAINER ============================= */
 
 .info {
   width: 1600px;
   background-color: var(--section-bg);
-
-  margin: 0 auto;
-}
-
-/** === INFO CONTAINER =========================================================== **/
-
-.info {
-  background-color: var(--contacts-bg);
-}
-
-.info-container {
-  /* display: flex; */
-  /* justify-content: space-between; */
-}
-
-.info-title {
-  color: var(--title-color-dark);
-}
-
-/** === ONLINE-BOOKING  ============================================================================== **/
-
-.booking {
-  /* max-width: 815px; */
-}
-
-/** === INFO CONTAINER =========================================================== **/
-
-.info {
-  width: 1600px;
-  background-color: var(--contacts-bg);
 
   background-image: url(../images/contacts-img.png);
   background-repeat: no-repeat;
@@ -671,13 +677,17 @@ h2 {
   color: var(--title-color-dark);
 }
 
-/** === ONLINE-BOOKING  ============================================================================== **/
+/* #endregion INFO CONTAINER ============================= */
+
+/* #region ONLINE-BOOKING ============================== */
 
 .booking {
   width: 600px;
 }
 
-/** === CONTACTS ============================================================ **/
+/* #endregion ONLINE-BOOKING  ============================== */
+
+/* #region CONTACTS ==================================== */
 
 .contacts {
   width: 570px;
@@ -744,7 +754,9 @@ h2 {
   margin-top: 20px;
 }
 
-/** === FOOTER ================================================== **/
+/* #endregion CONTACTS ==================================== */
+
+/* #region FOOTER ++++++++++++++++++++++++++++++++++++++ */
 
 .footer {
   background-color: var(--footer-bg);
@@ -795,3 +807,5 @@ h2 {
 .footer-link:focus {
   color: var(--social-text-hover);
 }
+
+/* #endregion FOOTER ++++++++++++++++++++++++++++++++++++++ */
