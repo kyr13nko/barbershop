@@ -1,49 +1,16 @@
 /* #region ROOT ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 :root {
-  --header-text: #ffffff;
-  --header-text-hover: #ff6c00;
+  --orange: #ff6c00;
+  --white: #ffffff;
+  --grey-dark: #303030;
+  --grey-light: #555555;
+  --violet-light: #9da4bd;
+  --bg-light: #f7f7f7;
+  --bg-dark: #111319;
+  --bg-contacts: #191c26;
 
-  --btn-bg: transparent;
-  --btn-text-light: #ffffff;
-  --btn-text-dark: #303030;
-  --btn-hover: #ff6c00;
-
-  --social-text: #303030;
-  --social-text-hover: #ff6c00;
-
-  --top-text-dark: rgba(157, 164, 189, 0.6);
-  --top-text-light: #303030;
-
-  --before-color-light: rgba(157, 164, 189, 0.6);
-  --before-color-dark: #303030;
-
-  --main-title-color: #ffffff;
-  --title-color-light: #303030;
-  --title-color-dark: #ffffff;
-
-  --bottom-text-dark: #9da4bd;
-  --bottom-text-light: #555555;
-
-  --about-text: #555555;
-
-  --benefits-text: #303030;
-  --benefits-items: #f7f7f7;
-  --benefits-plus: #ff6c00;
-
-  --section-bg: #111319;
-
-  --barbers-bg: #f7f7f7;
-  --barbers-text: #ff6c00;
-  --barbers-icon: #ffffff;
-
-  --contacts-color: #9da4bd;
-  --contacts-bg: #191c26;
-
-  --footer-bg: #f7f7f7;
-  --copyright-color: #9da4bd;
-
-  /* --test: linear-gradient(to right, teal, tomato); */
+  --transition-hover-focus: 350ms linear;
 }
 
 /* #endregion ROOT ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -52,7 +19,6 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  /* background-image: var(--test); */
 }
 
 h1,
@@ -128,9 +94,9 @@ h2 {
 
   cursor: pointer;
 
-  background-color: var(--btn-bg);
+  background-color: transparent;
 
-  border: 1px solid var(--btn-hover);
+  border: 1px solid var(--orange);
   border-radius: 25px;
 
   padding: 12px 20px;
@@ -205,28 +171,34 @@ h2 {
 
 .header-link,
 .header-phone {
-  color: var(--header-text);
+  color: var(--white);
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
+
+  transition: color var(--transition-hover-focus);
 }
 
 .header-link:hover,
-.header-link:focus {
-  color: var(--header-text-hover);
+.header-link:focus,
+.header-phone:hover,
+.header-phone:focus {
+  color: var(--orange);
 }
 
 .header-btn {
-  color: var(--btn-text-light);
+  color: var(--white);
 
   margin-left: 44px;
+
+  transition: background-color var(--transition-hover-focus), color var(--transition-hover-focus);
 }
 
 .header-btn:hover,
 .header-btn:focus {
-  background-color: var(--btn-hover);
-  color: var(--btn-text-light);
+  background-color: var(--orange);
+  color: var(--white);
 }
 
 /* #endregion HEADER +++++++++++++++++++++++++++++++++ **/
@@ -241,23 +213,19 @@ h2 {
   width: 100px;
 }
 
-.hero-list {
-}
-
-.hero-item {
-}
-
 .hero-link {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
-  color: var(--social-text);
+  color: var(--grey-dark);
+
+  transition: color var(--transition-hover-focus);
 }
 
 .hero-link:hover,
 .hero-link:focus {
-  color: var(--social-text-hover);
+  color: var(--orange);
 }
 
 .hero-content {
@@ -266,10 +234,7 @@ h2 {
   padding-left: 100px;
   flex-grow: 1;
 
-  background-image: linear-gradient(
-      rgba(25, 28, 38, 0.2),
-      rgba(25, 28, 38, 0.2)
-    ),
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
     url("../images/hero-img-1.jpg");
   background-position: center;
   background-size: cover;
@@ -281,7 +246,7 @@ h2 {
 }
 
 .hero-top-text {
-  color: var(--top-text-dark);
+  color: rgba(157, 164, 189, 0.6);
 }
 
 .hero-title {
@@ -289,20 +254,17 @@ h2 {
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
-  color: var(--main-title-color);
+  color: var(--white);
 }
 
 .hero-bottom-text {
   max-width: 360px;
-  color: var(--bottom-text-dark);
+  color: var(--violet-light);
 }
 
 /* #endregion HERO =================================== **/
 
 /* #region ABOUT ====================================== */
-
-.about {
-}
 
 .about-container {
   display: flex;
@@ -314,46 +276,45 @@ h2 {
   gap: 30px;
 }
 
-.about-item {
-}
-
 .about-content {
   max-width: 470px;
 }
 
 .about-top-text {
-  color: var(--top-text-light);
+  color: var(--grey-dark);
 }
 
 .about-title {
-  color: var(--title-color-light);
+  color: var(--grey-dark);
 
   margin: 20px 0;
 }
 
 .about-bottom-text {
-  color: var(--bottom-text-light);
+  color: var(--grey-light);
 }
 
 .about-text {
   font-size: 14px;
   line-height: 1.85;
   letter-spacing: 0.02em;
-  color: var(--about-text);
+  color: var(--grey-light);
 
   margin-top: 20px;
 }
 
 .about-btn {
-  color: var(--btn-text-dark);
+  color: var(--grey-dark);
 
   margin-top: 42px;
+
+  transition: background-color var(--transition-hover-focus), color var(--transition-hover-focus);
 }
 
 .about-btn:hover,
 .about-btn:focus {
-  background-color: var(--btn-hover);
-  color: var(--btn-text-light);
+  background-color: var(--orange);
+  color: var(--white);
 }
 /* #endregion ABOUT =================================== */
 
@@ -362,7 +323,7 @@ h2 {
 .prices {
   max-width: 1600px;
 
-  background-color: var(--section-bg);
+  background-color: var(--bg-dark);
 
   background-image: url(../images/prices-img.png);
   background-repeat: no-repeat;
@@ -373,11 +334,11 @@ h2 {
 }
 
 .prices-top-text {
-  color: var(--top-text-dark);
+  color: rgba(157, 164, 189, 0.6);
 }
 
 .prices-title {
-  color: var(--title-color-dark);
+  color: var(--white);
 
   margin-top: 20px;
   margin-bottom: 44px;
@@ -390,19 +351,11 @@ h2 {
 }
 
 .prices-list-left {
-  background-image: linear-gradient(
-    180deg,
-    #171a24 0%,
-    rgba(23, 26, 36, 0.2) 100%
-  );
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 
 .prices-list-right {
-  background-image: linear-gradient(
-    180deg,
-    #090b13 0%,
-    rgba(9, 11, 19, 0.2) 100%
-  );
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .prices-list {
@@ -433,7 +386,7 @@ h2 {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
-  color: var(--bottom-text-dark);
+  color: var(--violet-light);
 }
 
 .prices-item-text:first-child {
@@ -441,24 +394,23 @@ h2 {
 }
 
 .prices-btn {
-  color: var(--btn-text-light);
+  color: var(--white);
 
   display: block;
   margin: 44px auto 0;
+
+  transition: background-color var(--transition-hover-focus), color var(--transition-hover-focus);
 }
 
 .prices-btn:hover,
 .prices-btn:focus {
-  background-color: var(--btn-hover);
-  color: var(--btn-text-light);
+  background-color: var(--orange);
+  color: var(--white);
 }
 
 /* #endregion PRICES ================================== */
 
 /* #region BENEFITS =================================== */
-
-.benefits {
-}
 
 .benefits-container {
   display: flex;
@@ -481,7 +433,7 @@ h2 {
   height: 133px;
   text-align: center;
 
-  background-color: var(--benefits-items);
+  background-color: var(--bg-light);
 
   padding: 24px 20px;
 }
@@ -500,7 +452,7 @@ h2 {
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.05em;
-  color: var(--benefits-text);
+  color: var(--grey-dark);
 }
 
 .count::after {
@@ -513,7 +465,7 @@ h2 {
 
   margin-left: 1px;
 
-  text-shadow: 0px -21px 0px var(--benefits-plus);
+  text-shadow: 0px -21px 0px var(--orange);
 }
 
 .benefits-item-text {
@@ -521,7 +473,7 @@ h2 {
   font-size: 11px;
   line-height: 1.36;
   text-align: center;
-  color: var(--benefits-text);
+  color: var(--grey-dark);
 }
 
 .benefits-content {
@@ -529,17 +481,17 @@ h2 {
 }
 
 .benefits-top-text {
-  color: var(--top-text-light);
+  color: var(--grey-dark);
 }
 
 .benefits-title {
-  color: var(--title-color-light);
+  color: var(--grey-dark);
 
   margin: 20px 0;
 }
 
 .benefits-bottom-text {
-  color: var(--bottom-text-light);
+  color: var(--grey-light);
 }
 
 /* #endregion BENEFITS ================================ */
@@ -547,15 +499,15 @@ h2 {
 /* #region BARBERS ==================================== */
 
 .barbers {
-  background-color: var(--barbers-bg);
+  background-color: var(--bg-light);
 }
 
 .barbers-top-text {
-  color: var(--top-text-light);
+  color: var(--grey-dark);
 }
 
 .barbers-title {
-  color: var(--title-color-light);
+  color: var(--grey-dark);
 
   margin-top: 20px;
   margin-bottom: 44px;
@@ -581,7 +533,7 @@ h2 {
   text-align: center;
   letter-spacing: 0.02em;
 
-  color: var(--title-color-light);
+  color: var(--grey-dark);
 
   margin-top: 30px;
   margin-bottom: 8px;
@@ -593,7 +545,7 @@ h2 {
   text-align: center;
   letter-spacing: 0.02em;
 
-  color: var(--barbers-text);
+  color: var(--orange);
 }
 
 .barbers-content-list {
@@ -617,14 +569,16 @@ h2 {
   width: 100%;
   height: 100%;
 
-  background-color: var(--barbers-icon);
+  background-color: var(--white);
   border-radius: 50%;
-  color: var(--social-text);
+  color: var(--grey-dark);
+
+  transition: color var(--transition-hover-focus);
 }
 
 .barbers-content-link:hover,
 .barbers-content-link:focus {
-  color: var(--social-text-hover);
+  color: var(--orange);
 }
 
 .barbers-content-icon {
@@ -637,15 +591,12 @@ h2 {
 
 /* #region WORKS ======================================= */
 
-.works {
-}
-
 .works-top-text {
-  color: var(--top-text-light);
+  color: var(--grey-dark);
 }
 
 .works-title {
-  color: var(--title-color-light);
+  color: var(--grey-dark);
 }
 
 .works-list {
@@ -668,7 +619,7 @@ h2 {
 
 .info {
   width: 1600px;
-  background-color: var(--section-bg);
+  background-color: var(--bg-contacts);
 
   background-image: url(../images/contacts-img.png);
   background-repeat: no-repeat;
@@ -682,7 +633,7 @@ h2 {
 }
 
 .info-title {
-  color: var(--title-color-dark);
+  color: var(--white);
 }
 
 /* #endregion INFO CONTAINER ============================= */
@@ -690,7 +641,100 @@ h2 {
 /* #region ONLINE-BOOKING ============================== */
 
 .booking {
-  width: 600px;
+  /* width: 600px; */
+  flex-grow: 1;
+  padding-right: 30px;
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 44px;
+}
+
+.booking-form-input-wrap {
+  display: flex;
+  gap: 30px;
+
+  margin-bottom: 44px;
+}
+
+.booking-form-input {
+  width: calc((100% - 30px) / 2);
+  height: 24px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+
+  background-color: transparent;
+  color: var(--white);
+
+  transition: border-bottom var(--transition-hover-focus);
+}
+
+.booking-form-input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--white);
+
+  transition: color var(--transition-hover-focus);
+}
+
+.booking-form-message {
+  width: 100%;
+  height: 76px;
+  resize: none;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+
+  background-color: transparent;
+  color: var(--white);
+
+  transition: border-bottom var(--transition-hover-focus);
+}
+
+.booking-form-input::placeholder,
+.booking-form-message::placeholder {
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+
+  transition: color var(--transition-hover-focus);
+}
+
+.booking-form-input:focus.booking-form-input::placeholder,
+.booking-form-message:focus.booking-form-message::placeholder {
+  color: var(--white);
+}
+
+.booking-form-message:focus {
+  outline: none;
+  border-bottom: 1px solid var(--white);
+}
+
+.booking-form-btn {
+  align-self: flex-start;
+
+  background-color: transparent;
+  color: var(--white);
+
+  padding-left: 62px;
+  padding-right: 62px;
+  margin-top: 56px;
+
+  transition: background-color var(--transition-hover-focus);
+}
+.booking-form-btn:hover,
+.booking-form-btn:focus {
+  background-color: var(--orange);
 }
 
 /* #endregion ONLINE-BOOKING  ============================== */
@@ -710,9 +754,6 @@ h2 {
   margin-bottom: 70px;
 }
 
-.contacts-list {
-}
-
 .contacts-item {
   display: flex;
   gap: 16px;
@@ -726,7 +767,7 @@ h2 {
 .contacts-icon {
   width: 24px;
   height: 24px;
-  /* fill: var(--contacts-color); */
+  /* fill: var(--violet-light); */
 }
 
 .contacts-link {
@@ -735,12 +776,12 @@ h2 {
   line-height: 1.67;
   letter-spacing: 0.02em;
 
-  color: var(--contacts-color);
+  color: var(--violet-light);
 }
 
 .contacts-subtitle {
   gap: 20px;
-  color: var(--title-color-dark);
+  color: var(--white);
 }
 
 .contacts-text {
@@ -748,7 +789,7 @@ h2 {
   line-height: 1.67;
   letter-spacing: 0.02em;
 
-  color: var(--contacts-color);
+  color: var(--violet-light);
 
   margin-top: 20px;
 }
@@ -758,7 +799,7 @@ h2 {
 /* #region FOOTER ++++++++++++++++++++++++++++++++++++++ */
 
 .footer {
-  background-color: var(--footer-bg);
+  background-color: var(--bg-light);
 }
 
 .footer-container {
@@ -775,7 +816,7 @@ h2 {
   line-height: 1.36;
   letter-spacing: 0.2em;
 
-  color: var(--copyright-color);
+  color: var(--violet-light);
 }
 
 .footer-list {
@@ -790,7 +831,7 @@ h2 {
   width: 60px;
   height: 1px;
 
-  background: var(--before-color-dark);
+  background: var(--grey-dark);
 }
 
 .footer-link {
@@ -798,12 +839,14 @@ h2 {
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
-  color: var(--social-text);
+  color: var(--grey-dark);
+
+  transition: color var(--transition-hover-focus);
 }
 
 .footer-link:hover,
 .footer-link:focus {
-  color: var(--social-text-hover);
+  color: var(--orange);
 }
 
 /* #endregion FOOTER ++++++++++++++++++++++++++++++++++++++ */
@@ -837,7 +880,7 @@ h2 {
   width: 528px;
   /* height: 580px; */
 
-  background-color: var(--barbers-bg);
+  background-color: var(--bg-light);
 
   padding: 48px 24px;
 }
@@ -854,18 +897,20 @@ h2 {
   width: 30px;
   height: 30px;
 
-  background-color: var(--btn-bg);
-  color: var(--social-text);
-  border: 1px solid var(--btn-hover);
+  background-color: transparent;
+  color: var(--grey-dark);
+  border: 1px solid var(--orange);
   border-radius: 50%;
 
   padding: 0;
+
+  transition: background-color var(--transition-hover-focus), color var(--transition-hover-focus);
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  background-color: var(--btn-hover);
-  color: var(--btn-text-light);
+  background-color: var(--orange);
+  color: var(--white);
 }
 
 .modal-close-icon {
@@ -884,7 +929,7 @@ h2 {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
-  color: var(--title-color-light);
+  color: var(--grey-dark);
 
   margin-bottom: 16px;
 }
@@ -900,7 +945,7 @@ h2 {
   line-height: 1.17;
   letter-spacing: 0.04em;
 
-  color: var(--title-color-light);
+  color: var(--grey-dark);
 
   margin-bottom: 8px;
 }
@@ -922,14 +967,16 @@ h2 {
   width: 100%;
   height: 40px;
 
-  border: 1px solid var(--btn-text-dark);
+  border: 1px solid var(--grey-dark);
   border-radius: 4px;
 
   padding-left: 38px;
+
+  transition: border var(--transition-hover-focus);
 }
 
 .modal-form-input:focus {
-  border: 1px solid var(--btn-hover);
+  border: 1px solid var(--orange);
   outline: none;
 }
 
@@ -942,10 +989,12 @@ h2 {
   width: 18px;
   height: 24px;
   fill: currentColor;
+
+  transition: fill var(--transition-hover-focus);
 }
 
 .modal-form-input:focus + .modal-form-input-icon {
-  fill: var(--btn-hover);
+  fill: var(--orange);
 }
 
 .modal-form-message {
@@ -953,14 +1002,16 @@ h2 {
   height: 120px;
   resize: none;
 
-  border: 1px solid var(--btn-text-dark);
+  border: 1px solid var(--grey-dark);
   border-radius: 4px;
 
   padding: 8px 16px;
+
+  transition: border var(--transition-hover-focus);
 }
 
 .modal-form-message:focus {
-  border: 1px solid var(--btn-hover);
+  border: 1px solid var(--orange);
   outline: none;
 }
 
@@ -971,9 +1022,6 @@ h2 {
 .modal-form-check-wrap {
   display: flex;
   align-items: center;
-}
-
-.modal-form-check {
 }
 
 .modal-form-check-desc {
@@ -990,34 +1038,44 @@ h2 {
   content: "";
   width: 16px;
   height: 16px;
-  border: 1px solid var(--btn-text-dark);
+  border: 1px solid var(--grey-dark);
   border-radius: 50%;
 
   margin-right: 8px;
 
   cursor: pointer;
+
+  transition: background-color var(--transition-hover-focus), border var(--transition-hover-focus);
 }
 
 .modal-form-check:checked + .modal-form-check-desc::before {
-  background-color: var(--btn-hover);
-  border: 1px solid var(--btn-hover);
+  background-color: var(--orange);
+  border: 1px solid var(--orange);
   background-image: url(../images/modal-vector.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .modal-form-check:focus + .modal-form-check-desc::before {
-  border: 1px solid var(--btn-hover);
+  border: 1px solid var(--orange);
 }
 
 .modal-form-btn {
   align-self: center;
-  background-color: var(--btn-hover);
-  color: var(--btn-text-light);
+  background-color: transparent;
+  color: var(--grey-dark);
 
   padding-left: 50px;
   padding-right: 50px;
   margin-top: 24px;
+
+  transition: background-color var(--transition-hover-focus), color var(--transition-hover-focus);
+}
+
+.modal-form-btn:hover,
+.modal-form-btn:focus {
+  background-color: var(--orange);
+  color: var(--white);
 }
 
 /* #endregion MODAL FORM  +++++++++++++++++++++++++++++++++++++++++++++++++ */
