@@ -210,7 +210,25 @@ h2 {
 }
 
 .hero-soc-link {
+  display: flex;
+  align-items: flex-end;
   width: 100px;
+}
+
+.hero-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transform: translate(40px, -40px) rotate(-90deg);
+  transform-origin: bottom left;
+}
+
+.hero-list::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+
+  background: var(--grey-dark);
 }
 
 .hero-link {
