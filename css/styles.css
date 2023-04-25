@@ -656,6 +656,7 @@ h2 {
   background-image: url("../images/contacts-bg-desk.png");
   background-repeat: no-repeat;
   background-position: right center;
+  background-size: contain;
 
   margin: 0 auto;
 }
@@ -681,19 +682,24 @@ h2 {
 .booking-form {
   display: flex;
   flex-direction: column;
+  gap: 44px;
 
   margin-top: 44px;
 }
 
-.booking-form-input-wrap {
+.booking-input-wrap {
   display: flex;
+  justify-content: space-between;
   gap: 30px;
+}
 
-  margin-bottom: 44px;
+.booking-field {
+  position: relative;
+  width: 100%;
 }
 
 .booking-form-input {
-  width: calc((100% - 30px) / 2);
+  width: 100%;
   height: 24px;
 
   font-weight: 600;
@@ -709,11 +715,10 @@ h2 {
   transition: border-bottom var(--transition-hover-focus);
 }
 
-.booking-form-input:focus {
+.booking-form-input:focus,
+.booking-form-input:not(:placeholder-shown) {
   outline: none;
   border-bottom: 1px solid var(--white);
-
-  transition: color var(--transition-hover-focus);
 }
 
 .booking-form-message {
@@ -734,20 +739,31 @@ h2 {
   transition: border-bottom var(--transition-hover-focus);
 }
 
-.booking-form-input::placeholder,
-.booking-form-message::placeholder {
+.booking-form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgba(157, 164, 189, 0.4);
 
-  transition: color var(--transition-hover-focus);
+  transition: transform var(--transition-hover-focus),
+    color var(--transition-hover-focus);
 }
 
-.booking-form-input:focus.booking-form-input::placeholder,
-.booking-form-message:focus.booking-form-message::placeholder {
+.booking-form-input:focus + .booking-form-label,
+.booking-form-input:not(:placeholder-shown) + .booking-form-label,
+.booking-form-message:focus + .booking-form-label,
+.booking-form-message:not(:placeholder-shown) + .booking-form-label {
+  transform: translateY(-100%);
   color: var(--white);
 }
 
-.booking-form-message:focus {
+.booking-form-message:focus,
+.booking-form-message:not(:placeholder-shown) {
   outline: none;
   border-bottom: 1px solid var(--white);
 }
@@ -760,7 +776,6 @@ h2 {
 
   padding-left: 62px;
   padding-right: 62px;
-  margin-top: 56px;
 
   transition: background-color var(--transition-hover-focus);
 }
