@@ -1,3 +1,115 @@
+/* #region MEDIA 480px ================================================= */
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 448px;
+    margin: 0 auto;
+  }
+}
+
+/* #endregion MEDIA 480px ================================================= */
+
+/* #region MEDIA 768px ================================================= */
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding: 100px 0;
+  }
+
+  .container {
+    width: 720px;
+  }
+
+  /* === BARBERS === */
+
+  /* === WORKS === */
+
+  .works-container {
+    max-width: 100%;
+  }
+
+  .works-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    margin-top: 44px;
+  }
+
+  .pic-order {
+    order: -1;
+  }
+
+  .works-item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  .works-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  /* === FOOTER === */
+
+  .footer {
+    padding: 56px 0;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-copyright {
+    margin-top: 0;
+
+    order: -1;
+  }
+}
+
+/* #endregion MEDIA 768px ================================================= */
+
+/* #region MEDIA 1200px ================================================= */
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 120px 0;
+  }
+
+  .container {
+    width: 1200px;
+  }
+
+  /* === BARBERS === */
+
+  .barbers-container {
+    max-width: 100%;
+  }
+
+  .barbers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .barbers-item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+
+  .barbers-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  /* === WORKS === */
+
+  .works-item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
+/* #endregion MEDIA 1200px ================================================= */
+
+/* #region BG IMG ================================================= */
+
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
@@ -53,3 +165,5 @@
     background-image: url("../images/contacts-bg-desk@3x.png");
   }
 }
+
+/* #endregion BG IMG ================================================= */
