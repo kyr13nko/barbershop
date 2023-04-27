@@ -648,22 +648,19 @@ h2 {
 /* #region INFO CONTAINER ============================= */
 
 .info {
-  width: 1600px;
+  max-width: 448px;
   background-color: var(--bg-contacts);
 
-  background-image: url("../images/contacts-bg-desk.png");
+  background-image: url("../images/contacts-bg-mob.png");
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: center bottom;
   background-size: contain;
 
   margin: 0 auto;
 }
 
-.info-container {
-  display: flex;
-}
-
 .info-title {
+  text-align: center;
   color: var(--white);
 }
 
@@ -671,11 +668,9 @@ h2 {
 
 /* #region ONLINE-BOOKING ============================== */
 
-.booking {
-  /* width: 600px; */
-  flex-grow: 1;
-  padding-right: 30px;
-}
+/* .booking {
+  margin-bottom: 84px;
+} */
 
 .booking-form {
   display: flex;
@@ -687,8 +682,8 @@ h2 {
 
 .booking-input-wrap {
   display: flex;
-  justify-content: space-between;
-  gap: 30px;
+  flex-direction: column;
+  gap: 44px;
 }
 
 .booking-field {
@@ -767,7 +762,7 @@ h2 {
 }
 
 .booking-form-btn {
-  align-self: flex-start;
+  align-self: center;
 
   background-color: transparent;
   color: var(--white);
@@ -787,16 +782,14 @@ h2 {
 /* #region CONTACTS ==================================== */
 
 .contacts {
-  width: 570px;
-
-  padding-left: 100px;
+  margin-top: 120px;
 }
 
 .contacts-address {
   font-style: normal;
 
   margin-top: 40px;
-  margin-bottom: 70px;
+  margin-bottom: 44px;
 }
 
 .contacts-item {

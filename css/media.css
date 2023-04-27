@@ -86,6 +86,60 @@
     margin-bottom: 0;
   }
 
+  /* === INFO === */
+
+  .info {
+    max-width: 768px;
+
+    background-image: url("../images/contacts-bg-tab.png");
+  }
+
+  .info-title {
+    text-align: left;
+  }
+
+  /* === BOOKING === */
+
+  .booking {
+    margin-bottom: 148px;
+  }
+
+  .booking-input-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .booking-form-btn {
+    align-self: flex-start;
+  }
+  /* === CONTACTS === */
+
+  .contacts {
+    margin-top: 100px;
+  }
+
+  .contacts-wrap {
+    display: flex;
+    gap: 120px;
+  }
+
+  .contacts-wrap div {
+    margin-top: 40px;
+  }
+
+  .symbol-hidden {
+    display: none;
+  }
+
+  .contacts-item:first-child {
+    width: 230px;
+  }
+
+  .contacts-address {
+    margin-bottom: 18px;
+  }
+
   /* === FOOTER === */
 
   .footer {
@@ -199,6 +253,49 @@
 
   .works-item {
     flex-basis: calc((100% - 90px) / 4);
+  }
+
+  /* === INFO === */
+
+  .info {
+    max-width: 1600px;
+
+    background-image: url("../images/contacts-bg-desk.png");
+    background-position: right center;
+  }
+
+  .info-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  /* === BOOKING === */
+
+  .booking {
+    flex-grow: 1;
+    padding-right: 30px;
+
+    margin-bottom: 0;
+  }
+
+  /* === CONTACTS === */
+
+  .contacts {
+    width: 570px;
+
+    padding-left: 100px;
+    margin-top: 0;
+  }
+
+  .contacts-wrap {
+    display: block;
+  }
+
+  .contacts-wrap div {
+    margin-top: 0;
+  }
+
+  .contacts-address {
+    margin-bottom: 70px;
   }
 }
 /* #endregion MEDIA 1200px ================================================= */
