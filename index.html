@@ -23,11 +23,14 @@
     <title>Barbershop</title>
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="header-container container">
         <nav class="header-navigation">
           <a class="header-logo" href="">
             <img src="./images/logo.svg" alt="site logo" />
+          </a>
+          <a class="header-logo-light" href="">
+            <img src="./images/logo-light.svg" alt="site logo light" />
           </a>
           <ul class="header-list list">
             <li class="header-item">
@@ -44,14 +47,30 @@
             </li>
           </ul>
         </nav>
-        <a class="header-phone link" href="tel:+380441111111"
-          >+38 044 111 11 11</a
-        >
-        <button class="header-btn btn" type="button" data-modal-open>
-          Online-booking
+        <div class="header-contacts">
+          <a class="header-phone link" href="tel:+380441111111"
+            >+38 044 111 11 11</a
+          >
+          <button class="header-btn btn" type="button" data-modal-open>
+            Online-booking
+          </button>
+        </div>
+        <button class="header-menu-open-btn" type="button" data-menu-open>
+          <svg class="header-menu-open-icon" width="40" height="40">
+            <use href="./images/icons.svg#header-menu-open-icon"></use>
+          </svg>
         </button>
+        <div class="mobile-menu" data-menu>
+          <div class="container mobile-menu-container">
+            <button
+              class="mobile-menu-close-btn"
+              type="button"
+              data-menu-close
+            ></button>
+          </div>
+        </div>
       </div>
-    </header> -->
+    </header>
     <main>
       <section class="hero">
         <div class="hero-container container">
@@ -723,7 +742,7 @@
       </div>
     </footer>
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-close-icon">
@@ -790,8 +809,8 @@
           <button type="submit" class="modal-form-btn btn">Send</button>
         </form>
       </div>
-    </div> -->
-
-    <!-- <script src="./js/modal.js"></script> -->
+    </div>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

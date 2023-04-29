@@ -148,58 +148,45 @@ h2 {
 .header-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.header-navigation {
-  display: flex;
-  align-items: center;
-  gap: 132px;
-
-  margin-right: 254px;
+.header-logo {
+  display: none;
 }
 
 .header-list {
-  display: flex;
-  align-items: center;
-  /* gap: 30px; */
+  display: none;
 }
 
-.header-item:not(:last-child) {
-  margin-right: 30px;
+.header-list {
+  display: none;
 }
 
-.header-link,
-.header-phone {
-  color: var(--white);
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.1em;
-
-  transition: color var(--transition-hover-focus);
+.header-contacts {
+  display: none;
 }
 
-.header-link:hover,
-.header-link:focus,
-.header-phone:hover,
-.header-phone:focus {
-  color: var(--orange);
+.header-menu-open-btn {
+  line-height: 0;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
-.header-btn {
-  color: var(--white);
+/* #region MOBILE MENU +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-  margin-left: 44px;
-
-  transition: background-color var(--transition-hover-focus),
-    color var(--transition-hover-focus);
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-light);
 }
 
-.header-btn:hover,
-.header-btn:focus {
-  background-color: var(--orange);
-  color: var(--white);
-}
+/* #region MOBILE MENU +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* #endregion HEADER +++++++++++++++++++++++++++++++++ **/
 
@@ -899,7 +886,7 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 528px;
+  width: 320px;
   /* height: 580px; */
 
   background-color: var(--bg-light);
@@ -1053,7 +1040,7 @@ h2 {
   display: flex;
   align-items: center;
 
-  font-size: 12px;
+  font-size: 9px;
   line-height: 1.17;
   letter-spacing: 0.04em;
 }
