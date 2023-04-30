@@ -5,10 +5,22 @@
   }
 }
 
+@media screen and (max-width: 479px) {
+  .mobile-menu-link {
+    font-size: 14px;
+    line-height: 1.18;
+    letter-spacing: 0.1em;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 448px;
     margin: 0 auto;
+  }
+  .mobile-menu-close-btn {
+    left: 270px;
+    right: auto;
   }
 }
 
@@ -93,6 +105,10 @@
   }
 
   .header-menu-open-btn {
+    display: none;
+  }
+
+  .mobile-menu {
     display: none;
   }
 
