@@ -133,6 +133,14 @@ h2 {
   letter-spacing: 0.02em;
 }
 
+.header-menu-btn {
+  line-height: 0;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* #endregion STYLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* #region HEADER ++++++++++++++++++++++++++++++++++++++ **/
@@ -168,27 +176,129 @@ h2 {
 }
 
 .header-menu-open-btn {
-  line-height: 0;
-  background-color: transparent;
-  border: none;
-  margin: 0;
-  padding: 0;
 }
+
+/* #endregion HEADER +++++++++++++++++++++++++++++++++ **/
 
 /* #region MOBILE MENU +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 .mobile-menu {
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
+  z-index: 999;
   width: 100%;
   height: 100%;
+
   background-color: var(--bg-light);
+
+  transform: translateX(100%);
+  transition: transform var(--transition-hover-focus);
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+.mobile-menu-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  height: 100%;
+
+  padding: 118px 100px 64px 40px;
+}
+
+.mobile-menu-close-btn {
+  position: absolute;
+  top: 40px;
+  right: 15px;
+}
+
+.mobile-menu-close-icon {
+}
+
+.mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-menu-item {
+}
+
+.mobile-menu-link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.1em;
+
+  color: var(--grey-dark);
+
+  transition: color var(--transition-hover-focus);
+}
+
+.mobile-menu-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-menu-phone {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.39;
+  letter-spacing: 0.1em;
+
+  color: var(--grey-dark);
+}
+
+.mobile-menu-link:hover,
+.mobile-menu-link:focus,
+.mobile-menu-phone:hover,
+.mobile-menu-phone:focus {
+  color: var(--orange);
+}
+
+.mobile-menu-btn {
+  /* align-self: flex-start; */
+
+  max-width: 194px;
+
+  color: var(--grey-dark);
+
+  transition: background-color var(--transition-hover-focus),
+    color var(--transition-hover-focus);
+}
+
+.mobile-menu-btn:hover,
+.mobile-menu-btn:focus {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.mobile-menu-soc-list {
+  margin-top: auto;
+}
+
+.mobile-menu-soc-list::before {
+  display: inline-block;
+  content: "";
+  width: 60px;
+  height: 1px;
+
+  background: var(--grey-dark);
+}
+
+.mobile-menu-soc-item {
+}
+
+.mobile-menu-soc-link {
 }
 
 /* #region MOBILE MENU +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-/* #endregion HEADER +++++++++++++++++++++++++++++++++ **/
 
 /* #region HERO ======================================= */
 
