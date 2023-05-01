@@ -187,21 +187,26 @@ h2 {
   top: 0;
   right: 0;
   z-index: 999;
-  width: 69%;
-  max-width: 767px;
+  width: 100%;
   height: 100%;
 
   overflow: auto;
 
-  background-color: var(--bg-light);
+  /* background-color: var(--bg-light); */
 
   transform: translateX(100%);
-  transition: transform var(--transition-hover-focus);
+  transition: transform var(--transition-hover-focus),
+    background-color var(--transition-hover-focus);
 }
 
 .mobile-menu.is-open {
   transform: translateX(0);
+  background-color: rgba(48, 48, 48, 0.5);
 }
+
+/* .mobile-menu.is-open > body {
+  background-color: rgba(48, 48, 48, 0.5);
+} */
 
 .mobile-menu-container {
   position: relative;
@@ -216,11 +221,19 @@ h2 {
 
 .mobile-menu-close-btn {
   position: absolute;
+  z-index: 1;
   top: 40px;
   right: 15px;
 }
 
-.mobile-menu-close-icon {
+.mobile-menu-wrap {
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 320px;
+  height: 100%;
+
+  background-color: var(--bg-light);
 }
 
 .mobile-menu-list {
